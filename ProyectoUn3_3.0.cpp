@@ -519,7 +519,7 @@ void insertionSortDescending(int arr[], int size)
 // Shell Sort:
 /*
 Este utiliza una secuencia de intervalos para comparar y mover elementos hacia su posición final. 
-A medida que los intervalos disminuyen, el arreglo se va ordenando en pequeños grupos hasta obtener un arreglo completamente ordenado..
+A medida que los intervalos disminuyen, el arreglo se va ordenando en pequeños grupos hasta obtener un arreglo completamente ordenado.
 */
 
 void shellSortAscendant(int arr[], int size) 
