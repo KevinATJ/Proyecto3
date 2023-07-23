@@ -571,24 +571,6 @@ int main() {
     cout << "Ingresa la manera en la que deseas que estos algoritmos ordenen:" << endl <<"1)Ascendente " << endl << "2)Descendente"<<endl;
     cin >> Order;
     
-    if(Order == 1)
-    {
-    	cout << "La opcion escogida fue: orden ascendente"<<endl;
-	}
-	else if(Order == 2)
-	{
-		cout << "La opcion escogida fue: orden descendente"<<endl;
-	}
-	
-	cout << "Estas son las areas destinadas sobre las cuales estaran basadas las distintas carreras"<<endl;
-	cout << "A)Tablero de puntajes: esta tendra de 90000 a 100000 datos" << endl << "B)Determinacion de camino entre aldeas: esta tendra de 50000 a 70000 datos"<<endl<<"C)Dibujo o renderizado de objetos: Esta tendra de 500 a 1000 datos repartidos en 15 categorias(15000 maximo)"<<endl; 
-    
-    
-    
-    
-    
-    
-    
 
     return 0;
 }
