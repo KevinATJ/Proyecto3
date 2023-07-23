@@ -7,13 +7,13 @@
 using namespace std;
 
 
-// FunciÛn que genera el rango de las carreras en general, permitiendo cambiar dentro del main las variables min y max dependiendo del tipo de carrera 
+// Funci√≥n que genera el rango de las carreras en general, permitiendo cambiar dentro del main las variables min y max dependiendo del tipo de carrera 
 int generateRandomRaceRange(int min, int max) 
 {
     return min + rand() % (max - min + 1);
 }
 
-//FunciÛn que llena un arreglo de manera ascendente
+//Funci√≥n que llena un arreglo de manera ascendente
 void ascendingArray(int arr[], int size)
 {
 	int i;
@@ -24,7 +24,7 @@ void ascendingArray(int arr[], int size)
     }
 }
 
-//FunciÛn que llena un arreglo de manera descendente
+//Funci√≥n que llena un arreglo de manera descendente
 void descendingArray(int arr[], int size)
 {
 	int i;
@@ -37,7 +37,7 @@ void descendingArray(int arr[], int size)
 }
 
 
-//FunciÛn que llena un arreglo de manera completamente aleatoria
+//Funci√≥n que llena un arreglo de manera completamente aleatoria
 void fullRandomArray(int arr[], int size)
 {	
 	srand(time(NULL)); 
@@ -49,7 +49,7 @@ void fullRandomArray(int arr[], int size)
 		
 }
 
-//FunciÛn que llena un arreglo de manera semi aleatoria(es decir lo llena de manera aleatoria pero sin n˙meros duplicados)
+//Funci√≥n que llena un arreglo de manera semi aleatoria(es decir lo llena de manera aleatoria pero sin n√∫meros duplicados)
 void semiRandomArray(int arr[], int size)
 {
 	srand(time(NULL)); 
@@ -74,8 +74,8 @@ void semiRandomArray(int arr[], int size)
 
 //Bubble Sort: 
 /*
-Este recorre el arreglo comparando elementos vecinos y los intercambia si est·n en el orden incorrecto.En cada pasada, 
-el elemento m·s grande (ascendente) o m·s pequeÒo (descendente) se mueve  hacia su posiciÛn final. 
+Este recorre el arreglo comparando elementos vecinos y los intercambia si est√°n en el orden incorrecto.En cada pasada, 
+el elemento m√°s grande (ascendente) o m√°s peque√±o (descendente) se mueve  hacia su posici√≥n final. 
 */
 
 void bubbleSortAscendant(int arr[], int size) 
@@ -116,7 +116,7 @@ void bubbleSortDescending(int arr[], int size)
 
 // Heap Sort:
 /*
-En este se construye un heap(montÌculo) ascendente o descendente a partir del arreglo y luego se extraen los elementos uno a uno para obtener el 
+En este se construye un heap(mont√≠culo) ascendente o descendente a partir del arreglo y luego se extraen los elementos uno a uno para obtener el 
 arreglo ordenado de manera ascendente o descendente.
 */
 
@@ -132,7 +132,7 @@ void heapifyAscendant(int arr[], int size, int i)
         max = left;
     }
 
-    if (right < size && arr[right] > arr[largest]) 
+    if (right < size && arr[right] > arr[max]) 
 	{
         max = right;
     }
@@ -218,7 +218,7 @@ void heapSortDescending(int arr[], int size)
 // Quick Sort:
 /*
 Este selecciona un elemento (pivote) y reorganiza los elementos en dos grupos, uno con valores menores que el pivote y otro con valores mayores. 
-Luego, se aplica el mismo proceso a cada grupo(el dicho anteriormente) hasta que el arreglo estÈ completamente ordenado, ya sea en orden ascendente o descendente.
+Luego, se aplica el mismo proceso a cada grupo(el dicho anteriormente) hasta que el arreglo est√© completamente ordenado, ya sea en orden ascendente o descendente.
 */
 
 int pivotPartitionAscendant(int arr[], int low, int high) 
@@ -363,7 +363,7 @@ void mergeSortAscendant(int arr[], int left, int right)
         mergeSortAscendant(arr, left, mid);
         mergeSortAscendant(arr, mid + 1, right);
 
-        combineArrays(arr, left, mid, right);
+        combineArraysAscendant(arr, left, mid, right);
     }
 }
 
@@ -433,7 +433,7 @@ void mergeSortDescending(int arr[], int left, int right)
 
 // Selection Sort:
 /*
-Este encuentra(selecciona) repetidamente el elemento mÌnimo (o m·ximo, dependiendo del orden) del arreglo y lo coloca en su posiciÛn correcta. 
+Este encuentra(selecciona) repetidamente el elemento m√≠nimo (o m√°ximo, dependiendo del orden) del arreglo y lo coloca en su posici√≥n correcta. 
 Luego se repite este proceso para el resto de los elementos hasta obtener el arreglo completamente ordenado.
 */
 
@@ -446,14 +446,14 @@ void selectionSort(int arr[], int size)
         minIndex = i;
         for (j = i + 1; j < size; j++) 
 		{
-            if (arr[j] < arr[min_index]) 
+            if (arr[j] < arr[minIndex]) 
 			{
-                min_index = j;
+                minIndex = j;
             }
         }
         temp = arr[i];
-        arr[i] = arr[min_index];
-        arr[min_index] = temp;
+        arr[i] = arr[minIndex];
+        arr[minIndex] = temp;
     }
 }
 
@@ -479,7 +479,7 @@ void selectionSortDescending(int arr[], int size)
 
 // Insertion Sort:
 /*
-Este construye una parte ordenada del arreglo al insertar cada elemento en su posiciÛn correcta dentro de esa secciÛn ordenada. 
+Este construye una parte ordenada del arreglo al insertar cada elemento en su posici√≥n correcta dentro de esa secci√≥n ordenada. 
 Luego se repite este proceso para todos los elementos hasta obtener el arreglo completamente ordenado.
 */
 void insertionSortAscendant(int arr[], int size) 
@@ -518,8 +518,8 @@ void insertionSortDescending(int arr[], int size)
 
 // Shell Sort:
 /*
-Este utiliza una secuencia de intervalos para comparar y mover elementos hacia su posiciÛn final. 
-A medida que los intervalos disminuyen, el arreglo se va ordenando en pequeÒos grupos hasta obtener un arreglo completamente ordenado.
+Este utiliza una secuencia de intervalos para comparar y mover elementos hacia su posici√≥n final. 
+A medida que los intervalos disminuyen, el arreglo se va ordenando en peque√±os grupos hasta obtener un arreglo completamente ordenado.
 */
 
 void shellSortAscendant(int arr[], int size) 
@@ -570,6 +570,21 @@ int main() {
     
     cout << "Ingresa la manera en la que deseas que estos algoritmos ordenen:" << endl <<"1)Ascendente " << endl << "2)Descendente"<<endl;
     cin >> Order;
+    
+    if(Order == 1)
+    {
+    	cout << "La opcion escogida fue: orden ascendente"<<endl;
+	}
+	else if(Order == 2)
+	{
+		cout << "La opcion escogida fue: orden descendente"<<endl;
+	}
+	
+	cout << "Estas son las areas destinadas sobre las cuales estaran basadas las distintas carreras"<<endl;
+	cout << "A)Tablero de puntajes: esta tendra de 90000 a 100000 datos" << endl << "B)Determinacion de camino entre aldeas: esta tendra de 50000 a 70000 datos"<<endl<<"C)Dibujo o renderizado de objetos: Esta tendra de 500 a 1000 datos repartidos en 15 categorias(15000 maximo)"<<endl; 
+    
+    
+    
     
     
     
