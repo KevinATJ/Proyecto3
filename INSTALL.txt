@@ -1,0 +1,5 @@
+Install:
+
+1)Se recomienda usar el compilador Dev-C++ si es posible.
+2)Se recomienda no alterar los datos de los intervalos de tamaño de los arreglos, ya que a pesar de que aveces el programa demora su tiempo, estos datos dan resultados más realistas.
+3)Se recomienda compilar el programa en sistema operativo windows(ya que en este fue desarrollado).
